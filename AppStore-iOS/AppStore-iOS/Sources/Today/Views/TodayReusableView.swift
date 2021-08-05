@@ -26,7 +26,7 @@ class TodayReusableView: UICollectionReusableView {
     private var todayLabel = UILabel().then {
         $0.text = "투데이"
         $0.textColor = .black
-        $0.font = UIFont.boldSystemFont(ofSize: 25)
+        $0.font = UIFont.boldSystemFont(ofSize: 30)
     }
     
     private var iconImage = UIImageView().then {
