@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92D15FC926BB989900EACA9F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FC826BB989900EACA9F /* UIView+.swift */; };
+		92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FCE26BBA03500EACA9F /* TodayCVC.swift */; };
+		92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */; };
+		92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD326BBAC4E00EACA9F /* CALayer+.swift */; };
 		92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */; };
 		92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */; };
 		92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0626BAD4D900D16F79 /* TodayVC.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92D15FC826BB989900EACA9F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		92D15FCE26BBA03500EACA9F /* TodayCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCVC.swift; sourceTree = "<group>"; };
+		92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReusableView.swift; sourceTree = "<group>"; };
+		92D15FD326BBAC4E00EACA9F /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
 		92DEFBFF26BAD4D900D16F79 /* AppStore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +68,45 @@
 		92D15FC426BB8A9E00EACA9F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92DEFC0626BAD4D900D16F79 /* TodayVC.swift */,
+				92D15FCA26BB989E00EACA9F /* Extensions */,
+				92D15FC526BB956600EACA9F /* Today */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		92D15FC526BB956600EACA9F /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				92D15FD026BBA60700EACA9F /* Views */,
+				92D15FCB26BB9B6600EACA9F /* Cells */,
+				92DEFC0626BAD4D900D16F79 /* TodayVC.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		92D15FCA26BB989E00EACA9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92D15FC826BB989900EACA9F /* UIView+.swift */,
+				92D15FD326BBAC4E00EACA9F /* CALayer+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92D15FCB26BB9B6600EACA9F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				92D15FCE26BBA03500EACA9F /* TodayCVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		92D15FD026BBA60700EACA9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92DEFBF626BAD4D900D16F79 = {
@@ -217,9 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
+				92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */,
 				92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */,
 				92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */,
+				92D15FC926BB989900EACA9F /* UIView+.swift in Sources */,
+				92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
