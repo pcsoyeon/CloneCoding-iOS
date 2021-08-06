@@ -30,7 +30,7 @@ class TodayReusableView: UICollectionReusableView {
     }
     
     private var iconImage = UIImageView().then {
-        $0.image = UIImage(named: "pGranola")
+        $0.image = UIImage(named: "userIcon")
     }
     
     // MARK: - Custom Methods

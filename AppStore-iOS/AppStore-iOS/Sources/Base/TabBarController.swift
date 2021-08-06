@@ -12,10 +12,16 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let todayTab = TodayVC()
-        todayTab.tabBarItem = UITabBarItem(title: "투데이", image: UIImage(named: "btnHomeMaintabNormal"), selectedImage: UIImage(named: "btnHomeMaintabPressed"))
+        UITabBar.appearance().tintColor = .systemBlue
         
-        let tabs =  [todayTab]
+        let todayTab = TodayVC()
+        todayTab.tabBarItem = UITabBarItem(title: "투데이", image: UIImage(named: "today"), selectedImage: UIImage(named: "today"))
+        
+        let gameTab = UINavigationController(rootViewController: GameVC())
+        gameTab.setNavi()
+        gameTab.tabBarItem = UITabBarItem(title: "게임", image: UIImage(named: "games"), selectedImage: UIImage(named: "games"))
+        
+        let tabs =  [todayTab, gameTab]
         
         setViewControllers(tabs, animated: false)
         selectedViewController = todayTab
