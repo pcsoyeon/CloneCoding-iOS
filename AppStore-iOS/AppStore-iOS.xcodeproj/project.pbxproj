@@ -11,8 +11,9 @@
 		92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FCE26BBA03500EACA9F /* TodayCVC.swift */; };
 		92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */; };
 		92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD326BBAC4E00EACA9F /* CALayer+.swift */; };
-		92D15FD726BBB49B00EACA9F /* TitlesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD626BBB49B00EACA9F /* TitlesDataModel.swift */; };
+		92D15FD726BBB49B00EACA9F /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD626BBB49B00EACA9F /* Today.swift */; };
 		92D15FD926BBBE3200EACA9F /* TodayDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */; };
+		92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601E26BCF94A00EACA9F /* TodayListViewModel.swift */; };
 		92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */; };
 		92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */; };
 		92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0626BAD4D900D16F79 /* TodayVC.swift */; };
@@ -26,8 +27,9 @@
 		92D15FCE26BBA03500EACA9F /* TodayCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCVC.swift; sourceTree = "<group>"; };
 		92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReusableView.swift; sourceTree = "<group>"; };
 		92D15FD326BBAC4E00EACA9F /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
-		92D15FD626BBB49B00EACA9F /* TitlesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesDataModel.swift; sourceTree = "<group>"; };
+		92D15FD626BBB49B00EACA9F /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetailVC.swift; sourceTree = "<group>"; };
+		92D1601E26BCF94A00EACA9F /* TodayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayListViewModel.swift; sourceTree = "<group>"; };
 		92DEFBFF26BAD4D900D16F79 /* AppStore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		92D15FD026BBA60700EACA9F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92D1601E26BCF94A00EACA9F /* TodayListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -117,7 +120,7 @@
 		92D15FD526BBB47A00EACA9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				92D15FD626BBB49B00EACA9F /* TitlesDataModel.swift */,
+				92D15FD626BBB49B00EACA9F /* Today.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,10 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D15FD726BBB49B00EACA9F /* TitlesDataModel.swift in Sources */,
+				92D15FD726BBB49B00EACA9F /* Today.swift in Sources */,
 				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
 				92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */,
+				92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */,
 				92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */,
 				92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */,
 				92D15FD926BBBE3200EACA9F /* TodayDetailVC.swift in Sources */,

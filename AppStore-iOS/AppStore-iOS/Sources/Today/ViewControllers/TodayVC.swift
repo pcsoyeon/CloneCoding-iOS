@@ -11,20 +11,16 @@ import Then
 
 class TodayVC: UIViewController {
     
-    // MARK: - Properties
-    
-    let collectionViewFlowLayout = UICollectionViewFlowLayout()
-    
-    
     // MARK: - Lazy Properties
     
-    private lazy var todayCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+    private lazy var todayCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    private lazy var todayListViewModel = TodayListViewModel(collectionView: todayCollectionView)
     
     
     // MARK: - Local Variables
     
     private var statusBarShouldBeHidden: Bool = false
-    
     private func updateStatusBarAndTabbarFrame(visible: Bool) {
         statusBarShouldBeHidden = !visible
         UIView.animate(withDuration: 0.25) {
@@ -32,17 +28,13 @@ class TodayVC: UIViewController {
         }
     }
     
-    private var todayTitles = [TitlesDataModel]()
-    
-    // MARK: - Life Cycleㅊ
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configUI()
         setConstraints()
-        
-        setList()
         setCollectionView()
         
         setLongPressGesture()
@@ -81,17 +73,6 @@ extension TodayVC {
         
         todayCollectionView.backgroundColor = .white
     }
-    
-    func setList() {
-        todayTitles.append(contentsOf: [
-            TitlesDataModel(title: "제2의 나라\n모험을 위한 팁4", subTitle: "지금 경험하세요"),
-            TitlesDataModel(title: "꼭 해봐야 할 RPG", subTitle: "고르고 골랐어요"),
-            TitlesDataModel(title: "길건너 친구들 캐슬\n전격 해부", subTitle: "APPLE ARCADE"),
-            TitlesDataModel(title: "2020 도쿄올림픽\n앱으로 시청하세요", subTitle: "실시간으로 보세요")
-        ])
-    }
-    
-    
 }
 
 extension TodayVC: UIGestureRecognizerDelegate{
@@ -117,7 +98,7 @@ extension TodayVC: UIGestureRecognizerDelegate{
             updateStatusBarAndTabbarFrame(visible: false)
             
             let dvc = TodayDetailVC()
-            dvc.modalPresentationStyle = .fullScreen
+            
             self.present(dvc, animated: true) {
                 cell.transform = .identity
             }
@@ -164,14 +145,15 @@ extension TodayVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return todayTitles.count
+        return todayListViewModel.lists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TodayCVC.identifier, for: indexPath) as? TodayCVC else {
             return UICollectionViewCell()
         }
-        cell.initCell(title: todayTitles[indexPath.row].title, subTitle: todayTitles[indexPath.row].subTitle)
+        let data = todayListViewModel.lists[indexPath.row]
+        cell.initCell(title: data.title, subTitle: data.subTitle)
         return cell
     }
 }

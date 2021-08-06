@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TitlesDataModel {
+struct Today {
     var title: String
     var subTitle: String
 }
