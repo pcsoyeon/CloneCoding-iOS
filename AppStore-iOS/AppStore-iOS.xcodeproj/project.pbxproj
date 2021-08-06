@@ -14,6 +14,7 @@
 		92D15FD726BBB49B00EACA9F /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD626BBB49B00EACA9F /* Today.swift */; };
 		92D15FD926BBBE3200EACA9F /* TodayDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */; };
 		92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1601E26BCF94A00EACA9F /* TodayListViewModel.swift */; };
+		92D1602226BD07BC00EACA9F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1602126BD07BC00EACA9F /* TabBarController.swift */; };
 		92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */; };
 		92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */; };
 		92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0626BAD4D900D16F79 /* TodayVC.swift */; };
@@ -30,6 +31,7 @@
 		92D15FD626BBB49B00EACA9F /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetailVC.swift; sourceTree = "<group>"; };
 		92D1601E26BCF94A00EACA9F /* TodayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayListViewModel.swift; sourceTree = "<group>"; };
+		92D1602126BD07BC00EACA9F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		92DEFBFF26BAD4D900D16F79 /* AppStore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		92D15FC426BB8A9E00EACA9F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92D1602026BD07A100EACA9F /* Base */,
 				92D15FC526BB956600EACA9F /* Today */,
 			);
 			path = Sources;
@@ -132,6 +135,14 @@
 				92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92D1602026BD07A100EACA9F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				92D1602126BD07BC00EACA9F /* TabBarController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		92DEFBF626BAD4D900D16F79 = {
@@ -288,6 +299,7 @@
 			files = (
 				92D15FD726BBB49B00EACA9F /* Today.swift in Sources */,
 				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
+				92D1602226BD07BC00EACA9F /* TabBarController.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
 				92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */,
 				92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */,
