@@ -23,7 +23,7 @@ class TodayVC: UIViewController {
     
     // MARK: - Local Variables
     
-    private var statusBarShouldBeHidden = false
+    private var statusBarShouldBeHidden: Bool = false
     
     private func updateStatusBarAndTabbarFrame(visible: Bool) {
         statusBarShouldBeHidden = !visible
@@ -34,7 +34,7 @@ class TodayVC: UIViewController {
     
     private var todayTitles = [TitlesDataModel]()
     
-    // MARK: - Life Cycle
+    // MARK: - Life Cycleㅊ
     
     override func viewDidLoad() {
         super.viewDidLoad()
