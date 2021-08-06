@@ -73,7 +73,6 @@
 		92D15FC426BB8A9E00EACA9F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92D15FD526BBB47A00EACA9F /* Models */,
 				92D15FC526BB956600EACA9F /* Today */,
 			);
 			path = Sources;
@@ -82,10 +81,10 @@
 		92D15FC526BB956600EACA9F /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				92D15FD026BBA60700EACA9F /* Views */,
 				92D15FCB26BB9B6600EACA9F /* Cells */,
-				92DEFC0626BAD4D900D16F79 /* TodayVC.swift */,
-				92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */,
+				92D15FD026BBA60700EACA9F /* ViewModels */,
+				92D1601D26BCF84500EACA9F /* ViewControllers */,
+				92D15FD526BBB47A00EACA9F /* Models */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -102,17 +101,17 @@
 		92D15FCB26BB9B6600EACA9F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */,
 				92D15FCE26BBA03500EACA9F /* TodayCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		92D15FD026BBA60700EACA9F /* Views */ = {
+		92D15FD026BBA60700EACA9F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */,
 			);
-			path = Views;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		92D15FD526BBB47A00EACA9F /* Models */ = {
@@ -121,6 +120,15 @@
 				92D15FD626BBB49B00EACA9F /* TitlesDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		92D1601D26BCF84500EACA9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92DEFC0626BAD4D900D16F79 /* TodayVC.swift */,
+				92D15FD826BBBE3200EACA9F /* TodayDetailVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		92DEFBF626BAD4D900D16F79 = {
