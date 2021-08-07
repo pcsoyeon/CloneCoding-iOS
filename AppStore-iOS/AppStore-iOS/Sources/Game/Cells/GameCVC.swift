@@ -10,8 +10,6 @@ import UIKit
 class GameCVC: UICollectionViewCell {
     static let identifier = "GameCVC"
     
-    // MARK: UI Components
-    
     private var backView = UIView().then {
         $0.backgroundColor = .white
         
@@ -20,7 +18,6 @@ class GameCVC: UICollectionViewCell {
         $0.layer.applyShadow()
     }
     
-    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -30,13 +27,16 @@ class GameCVC: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func layoutSubviews() {
+        backView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview().inset(5)
+        }
+    }
 }
+
 extension GameCVC {
     func configUI() {
-        addSubview(backView)
-        
-        backView.snp.makeConstraints { make in
-            make.leading.trailing.top.bottom.equalToSuperview()
-        }
+        contentView.addSubview(backView)
     }
 }
