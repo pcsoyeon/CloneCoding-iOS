@@ -84,6 +84,7 @@ extension GameVC {
         
         gameTableView.register(GameTVC.self, forCellReuseIdentifier: GameTVC.identifier)
         gameTableView.register(ListTVC.self, forCellReuseIdentifier: ListTVC.identifier)
+        gameTableView.register(IntroTVC.self, forCellReuseIdentifier: IntroTVC.identifier)
         
         gameTableView.backgroundColor = .white
         gameTableView.separatorStyle = .none
@@ -97,7 +98,7 @@ extension GameVC: UITableViewDelegate {
         } else if indexPath.section == 1 {
             return 350
         } else if indexPath.section == 2 {
-            return 312
+            return 300
         }
         return 0
     }
@@ -126,6 +127,12 @@ extension GameVC: UITableViewDataSource {
         
         if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTVC.identifier) as? ListTVC else { return UITableViewCell() }
+            cell.selectionStyle = .none
+            return cell
+        }
+        
+        if indexPath.section == 2 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: IntroTVC.identifier) as? IntroTVC else { return UITableViewCell() }
             cell.selectionStyle = .none
             return cell
         }

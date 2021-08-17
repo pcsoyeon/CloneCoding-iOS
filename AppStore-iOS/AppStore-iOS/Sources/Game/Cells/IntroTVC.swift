@@ -1,5 +1,5 @@
 //
-//  TodayGameTVC.swift
+//  IntroTVC.swift
 //  AppStore-iOS
 //
 //  Created by soyeon on 2021/08/17.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ListTVC: UITableViewCell {
-    static let identifier = "ListTVC"
+class IntroTVC: UITableViewCell {
+    static let identifier = "IntroTVC"
     
     // MARK: - Properties
     
@@ -23,12 +23,6 @@ class ListTVC: UITableViewCell {
         return collectionView
     }()
     
-    private var games1 = [Game]()
-    private var games2 = [Game]()
-    private var gameList = [[Game]]()
-    
-    private var gameListVM: GameListViewModel!
-
     // MARK: - Initializer
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -36,7 +30,6 @@ class ListTVC: UITableViewCell {
         
         configUI()
         
-        setList()
         setHeaderView()
         setCollectionView()
     }
@@ -50,14 +43,13 @@ class ListTVC: UITableViewCell {
     }
 }
 
-extension ListTVC {
+extension IntroTVC {
     func configUI() {
-        backgroundColor = .white
-        
+        contentView.backgroundColor = .white
         contentView.addSubviews([headerView, listCollectionView])
         
         headerView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
+            make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(100)
         }
         
@@ -67,30 +59,13 @@ extension ListTVC {
         }
     }
     
-    func setList() {
-        games1.append(contentsOf: [
-            Game(category: "", title: "Pokemon GO", subTitle: "전 세계에서 포켓몬을 발견하자", image: "userIcon", free: "앱 내 구입", price: 0),
-            Game(category: "", title: "Pokemon GO", subTitle: "전 세계에서 포켓몬을 발견하자", image: "userIcon", free: "앱 내 구입", price: 0),
-            Game(category: "", title: "Pokemon GO", subTitle: "전 세계에서 포켓몬을 발견하자", image: "userIcon", free: "앱 내 구입", price: 0)
-        ])
-        
-        games2.append(contentsOf: [
-            Game(category: "", title: "ROBLOX", subTitle: "액션", image: "userIcon", free: "유료", price: 180),
-            Game(category: "", title: "ROBLOX", subTitle: "액션", image: "userIcon", free: "유료", price: 150),
-            Game(category: "", title: "ROBLOX", subTitle: "액션", image: "userIcon", free: "유료", price: 220)
-        ])
-        
-        gameList.append(games1)
-        gameList.append(games2)
-    }
-    
     func setHeaderView() {
-        headerView.titleLabel.text = "오늘은 이 게임"
-        headerView.subTitleLabel.text = "에디터가 직접 골랐답니다"
+        headerView.titleLabel.text = "사전 주문 중"
+        headerView.subTitleLabel.text = "출시 후 자동으로 다운로드됩니다"
     }
     
     func setCollectionView() {
-        listCollectionView.register(ListCVC.self, forCellWithReuseIdentifier: ListCVC.identifier)
+        listCollectionView.register(IntroCVC.self, forCellWithReuseIdentifier: IntroCVC.identifier)
         
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
@@ -101,23 +76,23 @@ extension ListTVC {
     }
 }
 
-extension ListTVC: UICollectionViewDelegateFlowLayout {
+extension IntroTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.width - 40
-        let cellHeight = collectionView.frame.height
+        let cellWidth = (collectionView.frame.width - 40) / 2
+        let cellHeight = collectionView.frame.height - 10
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        return UIEdgeInsets(top: 0, left: 20, bottom: 10, right: 20)
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let spacing = contentView.frame.width
+        let spacing = (contentView.frame.width) / 2
         var offset = targetContentOffset.pointee
         let index = round((offset.x + scrollView.contentInset.left) / spacing)
 
@@ -126,14 +101,13 @@ extension ListTVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension ListTVC: UICollectionViewDataSource {
+extension IntroTVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gameList.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCVC.identifier, for: indexPath) as? ListCVC else { return UICollectionViewCell() }
-        cell.initCell(games: gameList[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntroCVC.identifier, for: indexPath) as? IntroCVC else { return UICollectionViewCell() }
         return cell
     }
 }

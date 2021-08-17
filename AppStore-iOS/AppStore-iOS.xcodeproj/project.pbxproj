@@ -17,6 +17,8 @@
 		92CEF6E926CBAA6000BD06E9 /* ArcadeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6E826CBAA6000BD06E9 /* ArcadeVC.swift */; };
 		92CEF6EB26CBAA7000BD06E9 /* AppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6EA26CBAA7000BD06E9 /* AppVC.swift */; };
 		92CEF6ED26CBB96F00BD06E9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6EC26CBB96F00BD06E9 /* GameViewModel.swift */; };
+		92CEF6EF26CBD42B00BD06E9 /* IntroTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6EE26CBD42B00BD06E9 /* IntroTVC.swift */; };
+		92CEF6F126CBD44C00BD06E9 /* IntroCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6F026CBD44C00BD06E9 /* IntroCVC.swift */; };
 		92D15FC926BB989900EACA9F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FC826BB989900EACA9F /* UIView+.swift */; };
 		92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FCE26BBA03500EACA9F /* TodayCVC.swift */; };
 		92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */; };
@@ -49,6 +51,8 @@
 		92CEF6E826CBAA6000BD06E9 /* ArcadeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeVC.swift; sourceTree = "<group>"; };
 		92CEF6EA26CBAA7000BD06E9 /* AppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVC.swift; sourceTree = "<group>"; };
 		92CEF6EC26CBB96F00BD06E9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		92CEF6EE26CBD42B00BD06E9 /* IntroTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTVC.swift; sourceTree = "<group>"; };
+		92CEF6F026CBD44C00BD06E9 /* IntroCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCVC.swift; sourceTree = "<group>"; };
 		92D15FC826BB989900EACA9F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		92D15FCE26BBA03500EACA9F /* TodayCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCVC.swift; sourceTree = "<group>"; };
 		92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReusableView.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 				92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */,
 				92CEF6DD26CB843600BD06E9 /* ListCVC.swift */,
 				92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */,
+				92CEF6EE26CBD42B00BD06E9 /* IntroTVC.swift */,
+				92CEF6F026CBD44C00BD06E9 /* IntroCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -409,11 +415,13 @@
 				92D15FD726BBB49B00EACA9F /* Today.swift in Sources */,
 				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
 				92D1602226BD07BC00EACA9F /* TabBarController.swift in Sources */,
+				92CEF6EF26CBD42B00BD06E9 /* IntroTVC.swift in Sources */,
 				92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */,
 				92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */,
 				92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */,
 				92CEF6ED26CBB96F00BD06E9 /* GameViewModel.swift in Sources */,
 				92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */,
+				92CEF6F126CBD44C00BD06E9 /* IntroCVC.swift in Sources */,
 				92CEF6D826CB6D9B00BD06E9 /* TitleStackView.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
 				92D1602F26BD41E800EACA9F /* Game.swift in Sources */,

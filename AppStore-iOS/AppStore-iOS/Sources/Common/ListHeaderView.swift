@@ -11,19 +11,19 @@ class ListHeaderView: UIView {
     
     // MARK: - Properties
     
-    private lazy var titleLabel = UILabel().then {
-        $0.text = "오늘은 이 게임"
+    lazy var titleLabel = UILabel().then {
+        $0.text = "Title"
         $0.textColor = .black
         $0.font = UIFont.boldSystemFont(ofSize: 25)
     }
     
-    private lazy var subTitleLabel = UILabel().then {
-        $0.text  = "에디터가 직접 골랐답니다"
+    lazy var subTitleLabel = UILabel().then {
+        $0.text  = "Subtitle"
         $0.textColor = .gray
-        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.font = UIFont.systemFont(ofSize: 15)
     }
     
-    private lazy var seeAllButton = UIButton().then {
+    lazy var seeAllButton = UIButton().then {
         $0.setTitle("모두 보기", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
     }
