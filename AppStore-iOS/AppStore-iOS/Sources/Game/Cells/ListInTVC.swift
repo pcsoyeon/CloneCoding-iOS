@@ -37,6 +37,13 @@ class ListInTVC: UITableViewCell {
         $0.layer.cornerRadius = 15
         $0.layer.masksToBounds = true
     }
+    
+    private lazy var priceLabel = UILabel().then {
+        $0.text = "앱 내 구입"
+        $0.textColor = .gray
+        $0.font = UIFont.systemFont(ofSize: 10)
+        $0.isHidden = true
+    }
 
     // MARK: - Initializer
     
@@ -57,7 +64,7 @@ class ListInTVC: UITableViewCell {
 
 extension ListInTVC {
     func configUI() {
-        contentView.addSubviews([gameImageView, titleLabel, subTitleLabel, getButton])
+        contentView.addSubviews([gameImageView, titleLabel, subTitleLabel, getButton, priceLabel])
         
         gameImageView.snp.makeConstraints { make in
             make.leading.centerY.equalToSuperview()
@@ -79,10 +86,26 @@ extension ListInTVC {
             make.centerY.equalToSuperview()
             make.width.equalTo(80)
         }
+        
+        priceLabel.snp.makeConstraints { make in
+            make.top.equalTo(getButton.snp.bottom).offset(5)
+            make.centerX.equalTo(getButton)
+        }
     }
     
-    func initCell(image: String, title: String, subTitle: String) {
+    func initCell(image: String, title: String, subTitle: String, free: String, price: Double) {
         titleLabel.text = title
         subTitleLabel.text = subTitle
+        
+        if free.contains("유료") {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            getButton.setTitle("$\(formatter.string(from: NSNumber(value: price))!)", for: .normal)
+        }
+        
+        if free.contains("앱 내 구입") {
+            getButton.setTitle("받기", for: .normal)
+            priceLabel.isHidden = false
+        }
     }
 }
