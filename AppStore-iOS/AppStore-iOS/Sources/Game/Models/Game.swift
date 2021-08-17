@@ -12,4 +12,6 @@ struct Game {
     var title: String
     var subTitle: String
     var image: String
+    var free: String
+    var price: Double
 }

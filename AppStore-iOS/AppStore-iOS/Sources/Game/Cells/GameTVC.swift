@@ -17,9 +17,11 @@ class GameTVC: UITableViewCell {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = true
-        
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
+    
+    // MARK: - Local Variables 
     
     private var games = [Game]()
 
@@ -67,26 +69,26 @@ extension GameTVC {
     
     func setList() {
         games.append(contentsOf: [
-            Game(category: "카테고리", title: "이름", subTitle: "부제목", image: "gameImage1"),
-            Game(category: "카테고리", title: "이름", subTitle: "부제목", image: "gameImage2"),
-            Game(category: "카테고리", title: "이름", subTitle: "부제목", image: "gameImage3")
+            Game(category: "새 시즌에 뛰어드세요", title: "Candy Crush Saga", subTitle: "친구들과 함께 축하해요", image: "gameImage1", free: "무료", price: 10000),
+            Game(category: "특별 이벤트", title: "8 Ball Pool", subTitle: "기네스북 등재 기념 특별 이벤트", image: "gameImage2", free: "무료", price: 10000),
+            Game(category: "업데이트", title: "서머너즈 워: 천공의 아레나", subTitle: "새로운 몬스터의 등장!", image: "gameImage3", free: "무료", price: 10000)
         ])
     }
 }
 
 extension GameTVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - 40)
-        let height = collectionView.frame.height
+        let width = collectionView.frame.width - 40
+        let height = collectionView.frame.height - 20
         return CGSize(width: width, height: height)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 }
 

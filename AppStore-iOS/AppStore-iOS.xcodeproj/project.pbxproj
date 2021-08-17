@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92CEF6D826CB6D9B00BD06E9 /* TitleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6D726CB6D9B00BD06E9 /* TitleStackView.swift */; };
+		92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */; };
+		92CEF6DC26CB82BD00BD06E9 /* ListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */; };
+		92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DD26CB843600BD06E9 /* ListCVC.swift */; };
+		92CEF6E026CB851D00BD06E9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */; };
+		92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */; };
 		92D15FC926BB989900EACA9F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FC826BB989900EACA9F /* UIView+.swift */; };
 		92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FCE26BBA03500EACA9F /* TodayCVC.swift */; };
 		92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */; };
@@ -18,7 +24,6 @@
 		92D1602526BD090100EACA9F /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1602426BD090100EACA9F /* GameVC.swift */; };
 		92D1602726BD24DF00EACA9F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1602626BD24DF00EACA9F /* UIViewController+.swift */; };
 		92D1602F26BD41E800EACA9F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1602E26BD41E800EACA9F /* Game.swift */; };
-		92D1603126BD425100EACA9F /* EventGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1603026BD425100EACA9F /* EventGameViewModel.swift */; };
 		92D1603526BD573100EACA9F /* GameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1603426BD573100EACA9F /* GameTVC.swift */; };
 		92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1603626BD59DD00EACA9F /* GameCVC.swift */; };
 		92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0226BAD4D900D16F79 /* AppDelegate.swift */; };
@@ -30,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92CEF6D726CB6D9B00BD06E9 /* TitleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleStackView.swift; sourceTree = "<group>"; };
+		92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTVC.swift; sourceTree = "<group>"; };
+		92CEF6DD26CB843600BD06E9 /* ListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCVC.swift; sourceTree = "<group>"; };
+		92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInTVC.swift; sourceTree = "<group>"; };
 		92D15FC826BB989900EACA9F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		92D15FCE26BBA03500EACA9F /* TodayCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCVC.swift; sourceTree = "<group>"; };
 		92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReusableView.swift; sourceTree = "<group>"; };
@@ -41,7 +52,6 @@
 		92D1602426BD090100EACA9F /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		92D1602626BD24DF00EACA9F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		92D1602E26BD41E800EACA9F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		92D1603026BD425100EACA9F /* EventGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGameViewModel.swift; sourceTree = "<group>"; };
 		92D1603426BD573100EACA9F /* GameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTVC.swift; sourceTree = "<group>"; };
 		92D1603626BD59DD00EACA9F /* GameCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCVC.swift; sourceTree = "<group>"; };
 		92DEFBFF26BAD4D900D16F79 /* AppStore-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +101,7 @@
 			children = (
 				92D1602326BD08E700EACA9F /* Game */,
 				92D15FC526BB956600EACA9F /* Today */,
-				92D1602026BD07A100EACA9F /* Base */,
+				92D1602026BD07A100EACA9F /* Common */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -113,6 +123,7 @@
 				92D15FC826BB989900EACA9F /* UIView+.swift */,
 				92D15FD326BBAC4E00EACA9F /* CALayer+.swift */,
 				92D1602626BD24DF00EACA9F /* UIViewController+.swift */,
+				92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,12 +162,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		92D1602026BD07A100EACA9F /* Base */ = {
+		92D1602026BD07A100EACA9F /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				92D1602126BD07BC00EACA9F /* TabBarController.swift */,
+				92CEF6D726CB6D9B00BD06E9 /* TitleStackView.swift */,
+				92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */,
 			);
-			path = Base;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		92D1602326BD08E700EACA9F /* Game */ = {
@@ -189,7 +202,6 @@
 		92D1602C26BD41B600EACA9F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				92D1603026BD425100EACA9F /* EventGameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -199,6 +211,9 @@
 			children = (
 				92D1603426BD573100EACA9F /* GameTVC.swift */,
 				92D1603626BD59DD00EACA9F /* GameCVC.swift */,
+				92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */,
+				92CEF6DD26CB843600BD06E9 /* ListCVC.swift */,
+				92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,16 +374,21 @@
 				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
 				92D1602226BD07BC00EACA9F /* TabBarController.swift in Sources */,
 				92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */,
+				92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */,
+				92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */,
+				92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */,
+				92CEF6D826CB6D9B00BD06E9 /* TitleStackView.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
 				92D1602F26BD41E800EACA9F /* Game.swift in Sources */,
 				92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */,
+				92CEF6DC26CB82BD00BD06E9 /* ListTVC.swift in Sources */,
 				92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */,
 				92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */,
 				92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */,
+				92CEF6E026CB851D00BD06E9 /* ListHeaderView.swift in Sources */,
 				92D15FD926BBBE3200EACA9F /* TodayDetailVC.swift in Sources */,
 				92D1602726BD24DF00EACA9F /* UIViewController+.swift in Sources */,
 				92D15FC926BB989900EACA9F /* UIView+.swift in Sources */,
-				92D1603126BD425100EACA9F /* EventGameViewModel.swift in Sources */,
 				92D1602526BD090100EACA9F /* GameVC.swift in Sources */,
 				92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */,
 				92D1603526BD573100EACA9F /* GameTVC.swift in Sources */,

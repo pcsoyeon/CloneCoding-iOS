@@ -16,6 +16,10 @@ class GameCVC: UICollectionViewCell {
         $0.backgroundColor = .white
     }
     
+    private var lineView = UIView().then {
+        $0.backgroundColor = .systemGray5
+    }
+    
     private var categoryLabel = UILabel().then {
         $0.textColor = .systemBlue
         $0.font = UIFont.systemFont(ofSize: 13)
@@ -53,6 +57,11 @@ class GameCVC: UICollectionViewCell {
             make.top.bottom.leading.trailing.equalToSuperview().inset(5)
         }
         
+        lineView.snp.makeConstraints { make in
+            make.height.equalTo(1)
+            make.top.width.equalToSuperview()
+        }
+        
         categoryLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.top.equalToSuperview().inset(10)
@@ -79,7 +88,7 @@ extension GameCVC {
     func configUI() {
         contentView.addSubview(backView)
         
-        backView.addSubviews([categoryLabel, titleLabel, subTitleLabel, gameImageView])
+        backView.addSubviews([lineView, categoryLabel, titleLabel, subTitleLabel, gameImageView])
     }
     
     func initCell(category: String, title: String, subTitle: String, image: String) {
