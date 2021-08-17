@@ -40,7 +40,7 @@ class TodayCVC: UICollectionViewCell {
         $0.layer.masksToBounds = true
         $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-    // MARK: - Life Cycle
+    // MARK: - Initializer
     
     override init(frame: CGRect) {
         super.init(frame: frame)
