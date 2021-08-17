@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct GameList {
+    var games: [Game]
+}
+
 struct Game {
     var category: String
     var title: String
@@ -15,3 +19,4 @@ struct Game {
     var free: String
     var price: Double
 }
+

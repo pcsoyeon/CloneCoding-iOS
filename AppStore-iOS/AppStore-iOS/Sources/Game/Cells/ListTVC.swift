@@ -25,8 +25,9 @@ class ListTVC: UITableViewCell {
     
     private var games1 = [Game]()
     private var games2 = [Game]()
-    
     private var gameList = [[Game]]()
+    
+    private var gameListVM: GameListViewModel!
 
     // MARK: - Initializer
     

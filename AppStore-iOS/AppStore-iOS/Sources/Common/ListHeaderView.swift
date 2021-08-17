@@ -20,7 +20,7 @@ class ListHeaderView: UIView {
     private lazy var subTitleLabel = UILabel().then {
         $0.text  = "에디터가 직접 골랐답니다"
         $0.textColor = .gray
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.systemFont(ofSize: 18)
     }
     
     private lazy var seeAllButton = UIButton().then {

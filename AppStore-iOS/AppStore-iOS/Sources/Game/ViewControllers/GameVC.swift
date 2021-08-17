@@ -11,7 +11,7 @@ import Then
 
 class GameVC: UIViewController {
     
-    // MARK: - UI Components
+    // MARK: - Properties 
     
     private lazy var gameTableView = UITableView(frame: .zero, style: .plain)
     
