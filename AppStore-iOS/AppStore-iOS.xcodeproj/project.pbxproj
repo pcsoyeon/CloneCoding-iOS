@@ -13,6 +13,9 @@
 		92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DD26CB843600BD06E9 /* ListCVC.swift */; };
 		92CEF6E026CB851D00BD06E9 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */; };
 		92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */; };
+		92CEF6E726CBAA4C00BD06E9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6E626CBAA4C00BD06E9 /* SearchVC.swift */; };
+		92CEF6E926CBAA6000BD06E9 /* ArcadeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6E826CBAA6000BD06E9 /* ArcadeVC.swift */; };
+		92CEF6EB26CBAA7000BD06E9 /* AppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6EA26CBAA7000BD06E9 /* AppVC.swift */; };
 		92D15FC926BB989900EACA9F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FC826BB989900EACA9F /* UIView+.swift */; };
 		92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FCE26BBA03500EACA9F /* TodayCVC.swift */; };
 		92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */; };
@@ -41,6 +44,9 @@
 		92CEF6DD26CB843600BD06E9 /* ListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCVC.swift; sourceTree = "<group>"; };
 		92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		92CEF6E126CB8E5F00BD06E9 /* ListInTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInTVC.swift; sourceTree = "<group>"; };
+		92CEF6E626CBAA4C00BD06E9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		92CEF6E826CBAA6000BD06E9 /* ArcadeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeVC.swift; sourceTree = "<group>"; };
+		92CEF6EA26CBAA7000BD06E9 /* AppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVC.swift; sourceTree = "<group>"; };
 		92D15FC826BB989900EACA9F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		92D15FCE26BBA03500EACA9F /* TodayCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCVC.swift; sourceTree = "<group>"; };
 		92D15FD126BBA62A00EACA9F /* TodayReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReusableView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		92CEF6E326CBAA2900BD06E9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				92CEF6EA26CBAA7000BD06E9 /* AppVC.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		92CEF6E426CBAA3000BD06E9 /* Arcade */ = {
+			isa = PBXGroup;
+			children = (
+				92CEF6E826CBAA6000BD06E9 /* ArcadeVC.swift */,
+			);
+			path = Arcade;
+			sourceTree = "<group>";
+		};
+		92CEF6E526CBAA3900BD06E9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				92CEF6E626CBAA4C00BD06E9 /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		92D15FC326BB8A8900EACA9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +129,9 @@
 		92D15FC426BB8A9E00EACA9F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92CEF6E526CBAA3900BD06E9 /* Search */,
+				92CEF6E426CBAA3000BD06E9 /* Arcade */,
+				92CEF6E326CBAA2900BD06E9 /* App */,
 				92D1602326BD08E700EACA9F /* Game */,
 				92D15FC526BB956600EACA9F /* Today */,
 				92D1602026BD07A100EACA9F /* Common */,
@@ -380,11 +413,13 @@
 				92CEF6D826CB6D9B00BD06E9 /* TitleStackView.swift in Sources */,
 				92DEFC0726BAD4D900D16F79 /* TodayVC.swift in Sources */,
 				92D1602F26BD41E800EACA9F /* Game.swift in Sources */,
+				92CEF6E926CBAA6000BD06E9 /* ArcadeVC.swift in Sources */,
 				92D15FD226BBA62A00EACA9F /* TodayReusableView.swift in Sources */,
 				92CEF6DC26CB82BD00BD06E9 /* ListTVC.swift in Sources */,
 				92D1601F26BCF94A00EACA9F /* TodayListViewModel.swift in Sources */,
 				92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */,
 				92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */,
+				92CEF6E726CBAA4C00BD06E9 /* SearchVC.swift in Sources */,
 				92CEF6E026CB851D00BD06E9 /* ListHeaderView.swift in Sources */,
 				92D15FD926BBBE3200EACA9F /* TodayDetailVC.swift in Sources */,
 				92D1602726BD24DF00EACA9F /* UIViewController+.swift in Sources */,
@@ -392,6 +427,7 @@
 				92D1602526BD090100EACA9F /* GameVC.swift in Sources */,
 				92D15FCF26BBA03500EACA9F /* TodayCVC.swift in Sources */,
 				92D1603526BD573100EACA9F /* GameTVC.swift in Sources */,
+				92CEF6EB26CBAA7000BD06E9 /* AppVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
