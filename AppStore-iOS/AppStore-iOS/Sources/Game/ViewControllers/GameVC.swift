@@ -98,7 +98,7 @@ extension GameVC: UITableViewDelegate {
         } else if indexPath.section == 1 {
             return 350
         } else if indexPath.section == 2 {
-            return 300
+            return 320
         }
         return 0
     }
