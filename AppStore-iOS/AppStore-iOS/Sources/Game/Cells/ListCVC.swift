@@ -69,6 +69,7 @@ extension ListCVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListInTVC.identifier) as? ListInTVC else { return UITableViewCell() }
         cell.initCell(image: games[indexPath.row].image, title: games[indexPath.row].title, subTitle: games[indexPath.row].subTitle, free: games[indexPath.row].free, price: games[indexPath.row].price)
+        cell.selectionStyle = .none
         return cell
     }
 }

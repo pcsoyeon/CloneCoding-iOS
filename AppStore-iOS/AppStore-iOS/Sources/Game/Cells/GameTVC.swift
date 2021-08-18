@@ -65,6 +65,8 @@ extension GameTVC {
         gameCollectionView.register(GameCVC.self, forCellWithReuseIdentifier: GameCVC.identifier)
         
         gameCollectionView.backgroundColor = .white
+        gameCollectionView.contentInsetAdjustmentBehavior = .never
+        gameCollectionView.decelerationRate = .fast
     }
     
     func setList() {
@@ -89,6 +91,15 @@ extension GameTVC: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let spacing = contentView.frame.width
+        var offset = targetContentOffset.pointee
+        let index = round((offset.x + scrollView.contentInset.left) / spacing)
+
+        offset = CGPoint(x: index * spacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
     }
 }
 
