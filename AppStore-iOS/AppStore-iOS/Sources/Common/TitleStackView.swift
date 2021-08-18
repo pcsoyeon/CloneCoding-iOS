@@ -38,11 +38,14 @@ class TitleStackView: UIStackView {
     lazy var button: UIButton = {
         let buttonWidth: CGFloat = 35.0
         let button = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: buttonWidth, height: buttonWidth)))
-        button.setTitle("", for: .normal)
-        button.setImage(UIImage(named: "userIcon"), for: .normal)
+        button.backgroundColor = .purple
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("B", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalToConstant: buttonWidth).isActive = true
         button.heightAnchor.constraint(equalToConstant: buttonWidth).isActive = true
+        button.layer.cornerRadius = button.bounds.height * 0.5
+        button.layer.masksToBounds = true
         return button
     }()
 }

@@ -15,22 +15,32 @@ class GameVC: UIViewController {
     
     private lazy var gameTableView = UITableView(frame: .zero, style: .plain)
     
-    lazy var titleStackView: TitleStackView = {
+    private lazy var titleStackView: TitleStackView = {
         let titleStackView = TitleStackView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 44.0)))
         titleStackView.translatesAutoresizingMaskIntoConstraints = false
         return titleStackView
     }()
     
-    lazy var tableHeaderView: UIView = {
+    lazy var titleLabel = UILabel().then {
+        $0.font = UIFont.systemFont(ofSize: UIFont.preferredFont(forTextStyle: .largeTitle).pointSize, weight: .heavy)
+        $0.text = "Games"
+        $0.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private lazy var tableHeaderView: UIView = {
         let tableHeaderView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 44.0)))
-        tableHeaderView.addSubview(titleStackView)
-        titleStackView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.top.bottom.equalToSuperview()
-        }
+//        tableHeaderView.addSubview(titleStackView)
+//        titleStackView.snp.makeConstraints { make in
+//            make.leading.trailing.top.bottom.equalToSuperview()
+//        }
+        tableHeaderView.addSubviews([titleLabel])
         return tableHeaderView
     }()
     
+    private lazy var userIconButton = UIBarButtonItem().then {
+        $0.image = UIImage(named: "userIcon")
+    }
     
     // MARK: - Life Cycle Methods
     
@@ -41,8 +51,8 @@ class GameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setTitle()
-        setLargeTitle()
+        setTitle()
+//        setLargeTitle()
         
         configUI()
         setConstraints()
@@ -54,7 +64,7 @@ class GameVC: UIViewController {
 extension GameVC {
     func setTitle() {
         title = nil
-        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
         gameTableView.tableHeaderView = tableHeaderView
@@ -64,6 +74,7 @@ extension GameVC {
         self.title = "게임"
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationItem.rightBarButtonItem = userIconButton
     }
     
     func configUI() {
@@ -103,10 +114,12 @@ extension GameVC: UITableViewDelegate {
         return 0
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        let maxTitlePoint = gameTableView.convert(CGPoint(x: titleStackView.titleLabel.bounds.minX, y: titleStackView.titleLabel.bounds.maxY), from: titleStackView.titleLabel)
-//        title = scrollView.contentOffset.y > maxTitlePoint.y ? "Games" : nil
-//    }
+        let maxTitlePoint = gameTableView.convert(CGPoint(x: titleLabel.bounds.minX, y: titleLabel.bounds.maxY), from: titleLabel)
+        title = scrollView.contentOffset.y > maxTitlePoint.y ? "Games" : nil
+        
+    }
 }
 
 extension GameVC: UITableViewDataSource {
