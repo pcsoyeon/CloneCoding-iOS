@@ -51,8 +51,8 @@ class GameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle()
-//        setLargeTitle()
+//        setTitle()
+        setLargeTitle()
         
         configUI()
         setConstraints()
@@ -114,12 +114,10 @@ extension GameVC: UITableViewDelegate {
         return 0
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        let maxTitlePoint = gameTableView.convert(CGPoint(x: titleStackView.titleLabel.bounds.minX, y: titleStackView.titleLabel.bounds.maxY), from: titleStackView.titleLabel)
-        let maxTitlePoint = gameTableView.convert(CGPoint(x: titleLabel.bounds.minX, y: titleLabel.bounds.maxY), from: titleLabel)
-        title = scrollView.contentOffset.y > maxTitlePoint.y ? "Games" : nil
-        
-    }
+//        title = scrollView.contentOffset.y > maxTitlePoint.y ? "Games" : nil
+//    }
 }
 
 extension GameVC: UITableViewDataSource {
