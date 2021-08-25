@@ -20,14 +20,6 @@ class TodayVC: UIViewController {
     
     // MARK: - Local Variables
     
-    private var statusBarShouldBeHidden: Bool = false
-    private func updateStatusBarAndTabbarFrame(visible: Bool) {
-        statusBarShouldBeHidden = !visible
-        UIView.animate(withDuration: 0.25) {
-            self.setNeedsStatusBarAppearanceUpdate()
-        }
-    }
-    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -38,14 +30,6 @@ class TodayVC: UIViewController {
         setCollectionView()
         
         setLongPressGesture()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return statusBarShouldBeHidden
-    }
-    
-    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return .slide
     }
 }
 
@@ -95,8 +79,6 @@ extension TodayVC: UIGestureRecognizerDelegate{
                 cell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
             }
         case UIGestureRecognizer.State.ended:
-            updateStatusBarAndTabbarFrame(visible: false)
-            
             let dvc = TodayDetailVC()
             
             self.present(dvc, animated: true) {

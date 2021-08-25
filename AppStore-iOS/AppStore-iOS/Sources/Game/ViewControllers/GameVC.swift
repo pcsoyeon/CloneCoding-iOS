@@ -71,7 +71,7 @@ extension GameVC {
     }
     
     func setLargeTitle() {
-        self.title = "게임"
+        self.title = "Games"
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationItem.rightBarButtonItem = userIconButton

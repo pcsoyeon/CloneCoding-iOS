@@ -24,7 +24,7 @@ class TodayReusableView: UICollectionReusableView {
     }
     
     private var todayLabel = UILabel().then {
-        $0.text = "투데이"
+        $0.text = "Today"
         $0.textColor = .black
         $0.font = UIFont.boldSystemFont(ofSize: 30)
     }
