@@ -94,7 +94,7 @@ extension GameTVC: UICollectionViewDelegateFlowLayout {
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let spacing = contentView.frame.width
+        let spacing = contentView.frame.width - 20
         var offset = targetContentOffset.pointee
         let index = round((offset.x + scrollView.contentInset.left) / spacing)
 
