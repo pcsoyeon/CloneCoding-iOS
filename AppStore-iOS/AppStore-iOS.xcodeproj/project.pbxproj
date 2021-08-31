@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		92640D1426D6838700391C97 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92640D1326D6838700391C97 /* TodayVC.swift */; };
+		92B6AC1726DE31210083B9CA /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AC1626DE31210083B9CA /* New.swift */; };
+		92B6AC1B26DE32FC0083B9CA /* NewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AC1A26DE32FC0083B9CA /* NewTVC.swift */; };
 		92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */; };
 		92CEF6DC26CB82BD00BD06E9 /* ListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */; };
 		92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEF6DD26CB843600BD06E9 /* ListCVC.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		92640D1326D6838700391C97 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		92B6AC1626DE31210083B9CA /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
+		92B6AC1A26DE32FC0083B9CA /* NewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTVC.swift; sourceTree = "<group>"; };
 		92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		92CEF6DB26CB82BD00BD06E9 /* ListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTVC.swift; sourceTree = "<group>"; };
 		92CEF6DD26CB843600BD06E9 /* ListCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCVC.swift; sourceTree = "<group>"; };
@@ -86,6 +90,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		92B6AC1326DE2FCB0083B9CA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92CEF6E626CBAA4C00BD06E9 /* SearchVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92B6AC1426DE2FD20083B9CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				92B6AC1A26DE32FC0083B9CA /* NewTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		92B6AC1526DE2FDA0083B9CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92B6AC1626DE31210083B9CA /* New.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		92CEF6E326CBAA2900BD06E9 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +133,9 @@
 		92CEF6E526CBAA3900BD06E9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				92CEF6E626CBAA4C00BD06E9 /* SearchVC.swift */,
+				92B6AC1426DE2FD20083B9CA /* Cells */,
+				92B6AC1326DE2FCB0083B9CA /* ViewControllers */,
+				92B6AC1526DE2FDA0083B9CA /* Models */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -368,6 +398,8 @@
 				92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */,
 				92640D1426D6838700391C97 /* TodayVC.swift in Sources */,
 				92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */,
+				92B6AC1B26DE32FC0083B9CA /* NewTVC.swift in Sources */,
+				92B6AC1726DE31210083B9CA /* New.swift in Sources */,
 				92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */,
 				92CEF6ED26CBB96F00BD06E9 /* GameViewModel.swift in Sources */,
 				92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */,

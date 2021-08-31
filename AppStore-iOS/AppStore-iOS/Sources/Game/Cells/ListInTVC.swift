@@ -21,7 +21,8 @@ class ListInTVC: UITableViewCell {
     private lazy var titleLabel = UILabel().then {
         $0.text = "Title"
         $0.textColor = .black
-        $0.font = UIFont.boldSystemFont(ofSize: 18)
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.numberOfLines = 2
     }
     
     private lazy var subTitleLabel = UILabel().then {
@@ -31,7 +32,7 @@ class ListInTVC: UITableViewCell {
     }
     
     private lazy var getButton = UIButton().then {
-        $0.setTitle("GET", for: .normal)
+        $0.setTitle("받기", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.backgroundColor = .systemGray5
         $0.layer.cornerRadius = 15
@@ -59,6 +60,12 @@ class ListInTVC: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10))
     }
 }
 
