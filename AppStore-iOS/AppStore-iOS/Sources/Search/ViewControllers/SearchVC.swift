@@ -135,6 +135,11 @@ extension SearchVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ListInTVC.identifier) as? ListInTVC else {
                 return UITableViewCell()
             }
+            if indexPath.row == 0 {
+                DispatchQueue.main.async {
+                    cell.showHighligt(isHidden: false)
+                }
+            }
             cell.initCell(image: recommendList[indexPath.row].image, title: recommendList[indexPath.row].title, subTitle: recommendList[indexPath.row].subTitle, free: recommendList[indexPath.row].free, price: recommendList[indexPath.row].price)
             cell.selectionStyle = .none
             return cell

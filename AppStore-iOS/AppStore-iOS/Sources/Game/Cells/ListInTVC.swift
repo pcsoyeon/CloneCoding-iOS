@@ -45,6 +45,15 @@ class ListInTVC: UITableViewCell {
         $0.font = UIFont.systemFont(ofSize: 10)
         $0.isHidden = true
     }
+    
+    private lazy var highligtView = UIView().then {
+        $0.backgroundColor = .init(red: 80 / 255, green: 188 / 255, blue: 223 / 255, alpha: 0.1)
+        $0.layer.cornerRadius = 15
+        $0.layer.masksToBounds = true
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.systemGray5.cgColor
+        $0.isHidden = true
+    }
 
     // MARK: - Initializer
     
@@ -71,7 +80,7 @@ class ListInTVC: UITableViewCell {
 
 extension ListInTVC {
     func configUI() {
-        contentView.addSubviews([gameImageView, titleLabel, subTitleLabel, getButton, priceLabel])
+        contentView.addSubviews([highligtView, gameImageView, titleLabel, subTitleLabel, getButton, priceLabel])
         
         gameImageView.snp.makeConstraints { make in
             make.leading.centerY.equalToSuperview()
@@ -79,7 +88,7 @@ extension ListInTVC {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(10)
+            make.top.equalToSuperview().inset(15)
             make.leading.equalTo(gameImageView.snp.trailing).offset(10)
         }
         
@@ -98,6 +107,12 @@ extension ListInTVC {
             make.top.equalTo(getButton.snp.bottom).offset(5)
             make.centerX.equalTo(getButton)
         }
+        
+        highligtView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(-5)
+            make.trailing.equalToSuperview().offset(5)
+            make.top.bottom.equalToSuperview().inset(5)
+        }
     }
     
     func initCell(image: String, title: String, subTitle: String, free: String, price: Double) {
@@ -114,5 +129,9 @@ extension ListInTVC {
             getButton.setTitle("받기", for: .normal)
             priceLabel.isHidden = false
         }
+    }
+    
+    func showHighligt(isHidden: Bool) {
+        highligtView.isHidden = isHidden
     }
 }
