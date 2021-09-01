@@ -15,7 +15,7 @@ class NewTVC: UITableViewCell {
     private var titleLabel = UILabel().then {
         $0.text = "title"
         $0.textColor = .systemBlue
-        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.font = UIFont.systemFont(ofSize: 19)
     }
 
     // MARK: - Life Cycle

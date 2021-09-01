@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
     func setNavi() {
         // To change colour of tappable items.
-        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .systemBlue
 
         // To control navigation bar's translucency.
         UINavigationBar.appearance().isTranslucent = true

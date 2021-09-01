@@ -12,6 +12,7 @@ class SearchVC: UIViewController {
     // MARK: - Properties
     
     private var searchTableView = UITableView(frame: .zero, style: .grouped)
+    private var searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Local Variables
     
@@ -38,6 +39,13 @@ extension SearchVC {
         self.title = "검색"
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        searchController.searchBar.placeholder = "게임, 앱, 스토리 등"
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "취소"
     }
     
     func setConstraints() {
