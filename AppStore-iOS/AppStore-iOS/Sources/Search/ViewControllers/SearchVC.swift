@@ -13,6 +13,7 @@ class SearchVC: UIViewController {
     
     private var searchTableView = UITableView(frame: .zero, style: .grouped)
     private var searchController = UISearchController(searchResultsController: nil)
+    private var userImage = UIImage(named: "userIcon")
     
     // MARK: - Local Variables
     
@@ -46,6 +47,8 @@ extension SearchVC {
         navigationItem.hidesSearchBarWhenScrolling = false
         
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "취소"
+        
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: userImage, style: .plain, target: nil, action: nil)
     }
     
     func setConstraints() {
@@ -82,7 +85,6 @@ extension SearchVC {
         searchTableView.register(ListInTVC.self, forCellReuseIdentifier: ListInTVC.identifier)
         
         searchTableView.backgroundColor = .white
-        searchTableView.showsVerticalScrollIndicator = false
     }
 }
 
@@ -98,6 +100,14 @@ extension SearchVC: UITableViewDelegate {
             return 90
         }
     }
+    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if searchTableView.contentOffset.y < 0 {
+//            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: userImage, style: .plain, target: nil, action: nil)
+//        } else {
+//            self.navigationItem.setRightBarButton(nil, animated: true)
+//        }
+//    }
 }
 
 extension SearchVC: UITableViewDataSource {
