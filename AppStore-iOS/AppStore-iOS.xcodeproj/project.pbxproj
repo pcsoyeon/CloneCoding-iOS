@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		92640D1426D6838700391C97 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92640D1326D6838700391C97 /* TodayVC.swift */; };
+		927F9B9D26E878550098D2ED /* TodayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9B9C26E878550098D2ED /* TodayTVC.swift */; };
+		927F9BB126E8A0150098D2ED /* CardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BB026E8A0150098D2ED /* CardDetailVC.swift */; };
+		927F9BB326E8A11B0098D2ED /* TodayAnimationTranstition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BB226E8A11B0098D2ED /* TodayAnimationTranstition.swift */; };
+		927F9BB526E8A1F00098D2ED /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BB426E8A1F00098D2ED /* GlobalConstants.swift */; };
+		927F9BB726E8A2050098D2ED /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BB626E8A2050098D2ED /* GlobalFunctions.swift */; };
+		927F9BB926E8A42B0098D2ED /* DetailScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BB826E8A42B0098D2ED /* DetailScrollView.swift */; };
+		927F9BBB26E8A58E0098D2ED /* CardPresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927F9BBA26E8A58E0098D2ED /* CardPresentController.swift */; };
 		92B6AC1726DE31210083B9CA /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AC1626DE31210083B9CA /* New.swift */; };
 		92B6AC1B26DE32FC0083B9CA /* NewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AC1A26DE32FC0083B9CA /* NewTVC.swift */; };
 		92B6AC1D26DE69440083B9CA /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AC1C26DE69440083B9CA /* UITableView+.swift */; };
@@ -39,6 +46,13 @@
 
 /* Begin PBXFileReference section */
 		92640D1326D6838700391C97 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		927F9B9C26E878550098D2ED /* TodayTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTVC.swift; sourceTree = "<group>"; };
+		927F9BB026E8A0150098D2ED /* CardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailVC.swift; sourceTree = "<group>"; };
+		927F9BB226E8A11B0098D2ED /* TodayAnimationTranstition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAnimationTranstition.swift; sourceTree = "<group>"; };
+		927F9BB426E8A1F00098D2ED /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		927F9BB626E8A2050098D2ED /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		927F9BB826E8A42B0098D2ED /* DetailScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScrollView.swift; sourceTree = "<group>"; };
+		927F9BBA26E8A58E0098D2ED /* CardPresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentController.swift; sourceTree = "<group>"; };
 		92B6AC1626DE31210083B9CA /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		92B6AC1A26DE32FC0083B9CA /* NewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTVC.swift; sourceTree = "<group>"; };
 		92B6AC1C26DE69440083B9CA /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
@@ -90,6 +104,40 @@
 				DF0A8D0270559892E3C1DE10 /* Pods_AppStore_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		927F9B9A26E878330098D2ED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92640D1326D6838700391C97 /* TodayVC.swift */,
+				927F9BB026E8A0150098D2ED /* CardDetailVC.swift */,
+				927F9BBA26E8A58E0098D2ED /* CardPresentController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		927F9B9B26E878420098D2ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				927F9B9C26E878550098D2ED /* TodayTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		927F9B9E26E891B10098D2ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		927F9BA126E895230098D2ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				927F9BB226E8A11B0098D2ED /* TodayAnimationTranstition.swift */,
+				927F9BB826E8A42B0098D2ED /* DetailScrollView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92B6AC1326DE2FCB0083B9CA /* ViewControllers */ = {
@@ -168,7 +216,10 @@
 		92D15FC526BB956600EACA9F /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				92640D1326D6838700391C97 /* TodayVC.swift */,
+				927F9B9B26E878420098D2ED /* Cells */,
+				927F9B9A26E878330098D2ED /* ViewControllers */,
+				927F9BA126E895230098D2ED /* Views */,
+				927F9B9E26E891B10098D2ED /* Models */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -190,6 +241,8 @@
 			children = (
 				92D1602126BD07BC00EACA9F /* TabBarController.swift */,
 				92CEF6DF26CB851D00BD06E9 /* ListHeaderView.swift */,
+				927F9BB426E8A1F00098D2ED /* GlobalConstants.swift */,
+				927F9BB626E8A2050098D2ED /* GlobalFunctions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -397,6 +450,7 @@
 			files = (
 				92D15FD426BBAC4E00EACA9F /* CALayer+.swift in Sources */,
 				92D1602226BD07BC00EACA9F /* TabBarController.swift in Sources */,
+				927F9BB726E8A2050098D2ED /* GlobalFunctions.swift in Sources */,
 				92CEF6EF26CBD42B00BD06E9 /* IntroTVC.swift in Sources */,
 				92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */,
 				92640D1426D6838700391C97 /* TodayVC.swift in Sources */,
@@ -405,16 +459,22 @@
 				92B6AC1726DE31210083B9CA /* New.swift in Sources */,
 				92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */,
 				92CEF6ED26CBB96F00BD06E9 /* GameViewModel.swift in Sources */,
+				927F9BB326E8A11B0098D2ED /* TodayAnimationTranstition.swift in Sources */,
+				927F9BB126E8A0150098D2ED /* CardDetailVC.swift in Sources */,
 				92CEF6DA26CB7E3600BD06E9 /* UIScreen+.swift in Sources */,
+				927F9B9D26E878550098D2ED /* TodayTVC.swift in Sources */,
 				92CEF6F126CBD44C00BD06E9 /* IntroCVC.swift in Sources */,
 				92D1602F26BD41E800EACA9F /* Game.swift in Sources */,
 				92CEF6E926CBAA6000BD06E9 /* ArcadeVC.swift in Sources */,
 				92CEF6DC26CB82BD00BD06E9 /* ListTVC.swift in Sources */,
 				92DEFC0326BAD4D900D16F79 /* AppDelegate.swift in Sources */,
 				92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */,
+				927F9BBB26E8A58E0098D2ED /* CardPresentController.swift in Sources */,
+				927F9BB926E8A42B0098D2ED /* DetailScrollView.swift in Sources */,
 				92B6AC1F26DE70500083B9CA /* UIViewController+.swift in Sources */,
 				92CEF6E726CBAA4C00BD06E9 /* SearchVC.swift in Sources */,
 				92B6AC1D26DE69440083B9CA /* UITableView+.swift in Sources */,
+				927F9BB526E8A1F00098D2ED /* GlobalConstants.swift in Sources */,
 				92CEF6E026CB851D00BD06E9 /* ListHeaderView.swift in Sources */,
 				92D15FC926BB989900EACA9F /* UIView+.swift in Sources */,
 				92D1602526BD090100EACA9F /* GameVC.swift in Sources */,
