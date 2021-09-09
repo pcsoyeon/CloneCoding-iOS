@@ -37,6 +37,8 @@ class GameVC: UIViewController {
         setConstraints()
         
         setTableView()
+        
+        getNotification()
     }
 }
 
@@ -114,5 +116,22 @@ extension GameVC: UITableViewDataSource {
         }
         
         return UITableViewCell()
+    }
+}
+
+extension GameVC {
+    func getNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(pushToDetailVC(_:)), name: NSNotification.Name("PushToDetailVC"), object: nil)
+    }
+    
+    @objc
+    func pushToDetailVC(_ notification: Notification) {
+        var cell: GameCVC
+        cell = notification.object as! GameCVC
+        
+        let vc = DetailVC(cell: cell)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -101,6 +101,11 @@ extension GameTVC: UICollectionViewDelegateFlowLayout {
         offset = CGPoint(x: index * spacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
         targetContentOffset.pointee = offset
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCVC.identifier, for: indexPath) as? GameCVC else { return }
+        NotificationCenter.default.post(name: NSNotification.Name("PushToDetailVC"), object: cell)
+    }
 }
 
 extension GameTVC: UICollectionViewDataSource {

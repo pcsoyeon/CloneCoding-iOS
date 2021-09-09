@@ -25,17 +25,19 @@ class GameCVC: UICollectionViewCell {
         $0.font = UIFont.systemFont(ofSize: 13)
     }
     
-    private var titleLabel = UILabel().then {
+    var titleLabel = UILabel().then {
+        $0.text = "Title"
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     
-    private var subTitleLabel = UILabel().then {
+    var subTitleLabel = UILabel().then {
+        $0.text = "SubTitle"
         $0.textColor = .gray
         $0.font = UIFont.systemFont(ofSize: 15)
     }
     
-    private var gameImageView = UIImageView().then {
+    var appImageView = UIImageView().then {
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
     }
@@ -77,7 +79,7 @@ class GameCVC: UICollectionViewCell {
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
         
-        gameImageView.snp.makeConstraints { make in
+        appImageView.snp.makeConstraints { make in
             make.width.centerX.bottom.equalToSuperview()
             make.top.equalTo(subTitleLabel.snp.bottom).offset(20)
         }
@@ -88,7 +90,7 @@ extension GameCVC {
     func configUI() {
         contentView.addSubview(backView)
         
-        backView.addSubviews([lineView, categoryLabel, titleLabel, subTitleLabel, gameImageView])
+        backView.addSubviews([lineView, categoryLabel, titleLabel, subTitleLabel, appImageView])
     }
     
     func initCell(category: String, title: String, subTitle: String, image: String) {
@@ -96,6 +98,6 @@ extension GameCVC {
         titleLabel.text = title
         subTitleLabel.text = subTitle
         
-        gameImageView.image = UIImage(named: image)
+        appImageView.image = UIImage(named: image)
     }
 }

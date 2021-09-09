@@ -19,3 +19,4 @@ extension UINavigationController {
         UINavigationBar.appearance().prefersLargeTitles = true
     }
 }
+
