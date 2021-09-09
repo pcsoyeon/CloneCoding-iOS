@@ -12,7 +12,7 @@ class ListInTVC: UITableViewCell {
     
     // MARK: - Properties
     
-    private lazy var gameImageView = UIView().then {
+    private lazy var appImageView = UIView().then {
         $0.backgroundColor = .systemBlue
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
@@ -80,21 +80,21 @@ class ListInTVC: UITableViewCell {
 
 extension ListInTVC {
     func configUI() {
-        contentView.addSubviews([highligtView, gameImageView, titleLabel, subTitleLabel, getButton, priceLabel])
+        contentView.addSubviews([highligtView, appImageView, titleLabel, subTitleLabel, getButton, priceLabel])
         
-        gameImageView.snp.makeConstraints { make in
+        appImageView.snp.makeConstraints { make in
             make.leading.centerY.equalToSuperview()
             make.width.height.equalTo(60)
         }
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(15)
-            make.leading.equalTo(gameImageView.snp.trailing).offset(10)
+            make.leading.equalTo(appImageView.snp.trailing).offset(10)
         }
         
         subTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
-            make.leading.equalTo(gameImageView.snp.trailing).offset(10)
+            make.leading.equalTo(appImageView.snp.trailing).offset(10)
         }
         
         getButton.snp.makeConstraints { make in

@@ -41,6 +41,8 @@
 		92DEFC0526BAD4D900D16F79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEFC0426BAD4D900D16F79 /* SceneDelegate.swift */; };
 		92DEFC0C26BAD4DA00D16F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DEFC0B26BAD4DA00D16F79 /* Assets.xcassets */; };
 		92DEFC0F26BAD4DA00D16F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DEFC0D26BAD4DA00D16F79 /* LaunchScreen.storyboard */; };
+		92F88B7826EA66CC0053FDEF /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F88B7726EA66CC0053FDEF /* String+.swift */; };
+		92F88B7A26EA6E570053FDEF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F88B7926EA6E570053FDEF /* AlertView.swift */; };
 		EB411D39B8F326A0DF23B42E /* Pods_AppStore_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0A8D0270559892E3C1DE10 /* Pods_AppStore_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		92DEFC0B26BAD4DA00D16F79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92DEFC0E26BAD4DA00D16F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92DEFC1026BAD4DA00D16F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F88B7726EA66CC0053FDEF /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		92F88B7926EA6E570053FDEF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		B225B8114545233174E12DCF /* Pods-AppStore-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore-iOS.release.xcconfig"; path = "Target Support Files/Pods-AppStore-iOS/Pods-AppStore-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DF0A8D0270559892E3C1DE10 /* Pods_AppStore_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C322FB4DD7EAA4EE6A2A00 /* Pods-AppStore-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore-iOS.debug.xcconfig"; path = "Target Support Files/Pods-AppStore-iOS/Pods-AppStore-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 			children = (
 				92640D1326D6838700391C97 /* TodayVC.swift */,
 				927F9BB026E8A0150098D2ED /* CardDetailVC.swift */,
-				927F9BBA26E8A58E0098D2ED /* CardPresentController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,8 +137,8 @@
 		927F9BA126E895230098D2ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				927F9BB226E8A11B0098D2ED /* TodayAnimationTranstition.swift */,
 				927F9BB826E8A42B0098D2ED /* DetailScrollView.swift */,
+				92F88B7926EA6E570053FDEF /* AlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,8 @@
 		92D15FC526BB956600EACA9F /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				927F9BB226E8A11B0098D2ED /* TodayAnimationTranstition.swift */,
+				927F9BBA26E8A58E0098D2ED /* CardPresentController.swift */,
 				927F9B9B26E878420098D2ED /* Cells */,
 				927F9B9A26E878330098D2ED /* ViewControllers */,
 				927F9BA126E895230098D2ED /* Views */,
@@ -232,6 +237,7 @@
 				92CEF6D926CB7E3600BD06E9 /* UIScreen+.swift */,
 				92B6AC1C26DE69440083B9CA /* UITableView+.swift */,
 				92B6AC1E26DE70500083B9CA /* UIViewController+.swift */,
+				92F88B7726EA66CC0053FDEF /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				92D1603726BD59DD00EACA9F /* GameCVC.swift in Sources */,
 				92640D1426D6838700391C97 /* TodayVC.swift in Sources */,
 				92CEF6E226CB8E5F00BD06E9 /* ListInTVC.swift in Sources */,
+				92F88B7826EA66CC0053FDEF /* String+.swift in Sources */,
 				92B6AC1B26DE32FC0083B9CA /* NewTVC.swift in Sources */,
 				92B6AC1726DE31210083B9CA /* New.swift in Sources */,
 				92CEF6DE26CB843600BD06E9 /* ListCVC.swift in Sources */,
@@ -480,6 +487,7 @@
 				92D1602526BD090100EACA9F /* GameVC.swift in Sources */,
 				92D1603526BD573100EACA9F /* GameTVC.swift in Sources */,
 				92CEF6EB26CBAA7000BD06E9 /* AppVC.swift in Sources */,
+				92F88B7A26EA6E570053FDEF /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

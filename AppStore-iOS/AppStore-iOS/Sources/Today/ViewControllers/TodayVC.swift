@@ -38,18 +38,25 @@ class TodayVC: UIViewController {
     // MARK: - Local Variables
     
     var selectedCell: TodayTVC?
+    private var list = [String]()
     
     // MARK: - Status Bar
     
     var statusBarShouldBeHidden = false
-    //we need to set `View controller-based status bar appearance = YES` in info.plist.
-    //so we can be able to hide statusBar.
+    
     override var prefersStatusBarHidden: Bool {
         return statusBarShouldBeHidden
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return .slide
+    }
+    
+    private func updateStatusBarAndTabbarFrame(visible: Bool) {
+        statusBarShouldBeHidden = !visible
+        UIView.animate(withDuration: 0.25) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
     
     // MARK: - Life Cycle
@@ -62,13 +69,6 @@ class TodayVC: UIViewController {
         
         setList()
         setTableView()
-    }
-    
-    private func updateStatusBarAndTabbarFrame(visible: Bool) {
-        statusBarShouldBeHidden = !visible
-        UIView.animate(withDuration: 0.25) {
-            self.setNeedsStatusBarAppearanceUpdate()
-        }
     }
 }
 
@@ -103,7 +103,9 @@ extension TodayVC {
     }
     
     func setList() {
-        
+        list.append("gameImage1")
+        list.append("gameImage2")
+        list.append("gameImage3")
     }
     
     func setTableView() {
@@ -113,6 +115,7 @@ extension TodayVC {
         todayTableView.register(TodayTVC.self, forCellReuseIdentifier: TodayTVC.identifier)
         
         todayTableView.separatorStyle = .none
+        todayTableView.backgroundColor = .white
     }
 }
 
@@ -150,20 +153,18 @@ extension TodayVC: UITableViewDelegate {
         selectedCell = cell
         
         let detailVC = CardDetailVC(cell: cell)
-        
         detailVC.dismissClosure = { [weak self] in
             guard let StrongSelf = self else { return }
             StrongSelf.updateStatusBarAndTabbarFrame(visible: true)
         }
-        
         updateStatusBarAndTabbarFrame(visible: false)
         
         present(detailVC, animated: true, completion: nil)
-        
     }
 }
 
 // MARK: - UITableView DataSource
+
 extension TodayVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -173,6 +174,8 @@ extension TodayVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodayTVC.identifier) as? TodayTVC else {
             return UITableViewCell()
         }
+        cell.setImageView(image: list[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
 }

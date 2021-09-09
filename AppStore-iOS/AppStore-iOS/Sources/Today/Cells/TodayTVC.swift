@@ -13,10 +13,15 @@ class TodayTVC: UITableViewCell {
     // MARK: - Properties
     
     lazy var backView = UIView().then {
-        $0.backgroundColor = .gray
         $0.layer.applyShadow()
         $0.layer.cornerRadius = 20
         $0.layer.masksToBounds = true
+    }
+    
+    lazy var appImageView = UIImageView().then {
+        $0.layer.cornerRadius = 20
+        $0.layer.masksToBounds = true
+        $0.contentMode = .scaleAspectFill
     }
 
     // MARK: - Life Cycle
@@ -42,10 +47,19 @@ extension TodayTVC {
     }
     
     func setConstraints() {
-        addSubviews([backView])
+        addSubview(backView)
+        backView.addSubviews([appImageView])
         
         backView.snp.makeConstraints { make in
             make.leading.trailing.top.bottom.equalToSuperview().inset(20)
         }
+        
+        appImageView.snp.makeConstraints { make in
+            make.leading.trailing.top.bottom.equalToSuperview()
+        }
+    }
+    
+    func setImageView(image: String) {
+        appImageView.image = UIImage(named: image)
     }
 }

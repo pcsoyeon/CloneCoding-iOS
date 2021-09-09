@@ -9,17 +9,7 @@ import UIKit
 
 class CardDetailVC: UIViewController {
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    var dismissClosure: (()->())?
-    //the point when start to interactive
-    var interactiveStartingPoint: CGPoint? = nil
-
-    var draggingDownToDismiss = false
-    
-    let cell: TodayTVC!
+    // MARK: - Properties
     
     private lazy var dismissPanGesture: UIPanGestureRecognizer = {
         let ges = UIPanGestureRecognizer()
@@ -44,10 +34,9 @@ class CardDetailVC: UIViewController {
         return btn
     }()
     
-    init(cell: TodayTVC) {
-        self.cell = cell
-        super.init(nibName: nil, bundle: nil)
-        self.setupTranstion()
+    private let alert = AlertView().then {
+        $0.layer.cornerRadius = 15
+        $0.layer.masksToBounds = true
     }
     
     private func setupTranstion() {
@@ -55,21 +44,47 @@ class CardDetailVC: UIViewController {
         transitioningDelegate = self
     }
     
+    // MARK: - Local Variables 
+    
+    var dismissClosure: (()->())?
+    var interactiveStartingPoint: CGPoint? = nil
+    var draggingDownToDismiss = false
+    
+    let cell: TodayTVC!
+    
+    // MARK: - Initializer
+    
+    init(cell: TodayTVC) {
+        self.cell = cell
+        super.init(nibName: nil, bundle: nil)
+        self.setupTranstion()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        getImageFromCell()
+    // MARK: - StatusBar
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
-    private func setupUI() {
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configUI()
+    }
+}
+
+extension CardDetailVC {
+    // MARK: UI
+    func configUI() {
         self.view.backgroundColor = .white
         self.view.layer.masksToBounds = true
-        view.addSubview(scrollView)
-        view.addSubview(closeBtn)
+        view.addSubviews([scrollView, closeBtn])
         view.addGestureRecognizer(dismissPanGesture)
         
         if #available(iOS 11.0, *) {
@@ -77,26 +92,35 @@ class CardDetailVC: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
+        
+        scrollView.imageView.image = cell.appImageView.image
+        
+        view.addSubview(alert)
+        alert.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(30)
+            make.height.equalTo(70)
+        }
+        alert.isHidden = true
     }
     
-    private func getImageFromCell() {
-//        scrollView.imageView.image = cell.backView.image
-    }
-    
-    @objc private func closeAction() {
+    // MARK: Action
+    @objc
+    private func closeAction() {
         dismiss(animated: true, completion: nil)
         dismissClosure?()
     }
     
-    @objc private func handleDismissPan(gesture: UIPanGestureRecognizer) {
+    @objc
+    private func handleDismissPan(gesture: UIPanGestureRecognizer) {
         if !draggingDownToDismiss {
             return
         }
         
         let startingPoint: CGPoint
         
-        if let p = interactiveStartingPoint {
-            startingPoint = p
+        if let point = interactiveStartingPoint {
+            startingPoint = point
         } else {
             startingPoint = gesture.location(in: nil)
             interactiveStartingPoint = startingPoint
@@ -106,7 +130,7 @@ class CardDetailVC: UIViewController {
         
         var progress = (currentLocation.y - startingPoint.y) / 100
         
-        //prevent viewController bigger when scrolling up
+        // prevent viewController bigger when scrolling up
         if currentLocation.y <= startingPoint.y {
             progress = 0
         }
@@ -135,7 +159,6 @@ class CardDetailVC: UIViewController {
         }
     }
     
-    //当下拉Offset超过100或取消下拉手势时，执行此方法
     private func stopDismissPanGesture(_ gesture: UIPanGestureRecognizer) {
         draggingDownToDismiss = false
         interactiveStartingPoint = nil
@@ -145,11 +168,12 @@ class CardDetailVC: UIViewController {
             gesture.view?.transform = CGAffineTransform.identity
         }
     }
-
 }
 
+
+// MARK: - UIViewControllerTransition
+
 extension CardDetailVC: UIViewControllerTransitioningDelegate {
-    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return TodayAnimationTransition(animationType: .present)
     }
@@ -163,15 +187,25 @@ extension CardDetailVC: UIViewControllerTransitioningDelegate {
     }
 }
 
+// MARK: - UIScrollView Delegate
+
 extension CardDetailVC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         if scrollView.contentOffset.y < 0 {
             scrollView.contentOffset = .zero
             draggingDownToDismiss = true
         }
+        
+        if scrollView.contentOffset.y > 10 {
+            alert.isHidden = false
+            alert.setImage(image: cell.appImageView.image ?? UIImage(named: "abc")!)
+        } else {
+            alert.isHidden = true
+        }
     }
 }
+
+// MARK: - UIGestureRecognizer Delegate
 
 extension CardDetailVC: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
