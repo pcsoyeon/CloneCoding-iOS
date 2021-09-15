@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7242950790D82BFDCBFF91E1 /* Pods_YouTubeMusic_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */; };
 		92D9E5DD26EFCBFC0080EB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */; };
 		92D9E5DF26EFCBFC0080EB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */; };
 		92D9E5E126EFCBFC0080EB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5E026EFCBFC0080EB98 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103DC6A39082206E1668E94D /* Pods-YouTubeMusic-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.debug.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		92D9E5D926EFCBFC0080EB98 /* YouTubeMusic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTubeMusic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D9E5E826EFCBFD0080EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D9E5EA26EFCBFD0080EB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeMusic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.release.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7242950790D82BFDCBFF91E1 /* Pods_YouTubeMusic_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				92D9E5DB26EFCBFC0080EB98 /* YouTubeMusic-iOS */,
 				92D9E5DA26EFCBFC0080EB98 /* Products */,
+				942E43008C54A3477F18D9A5 /* Pods */,
+				E9A0CF380FDE0110BD771D52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "YouTubeMusic-iOS";
 			sourceTree = "<group>";
 		};
+		942E43008C54A3477F18D9A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				103DC6A39082206E1668E94D /* Pods-YouTubeMusic-iOS.debug.xcconfig */,
+				9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9A0CF380FDE0110BD771D52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92D9E5ED26EFCBFD0080EB98 /* Build configuration list for PBXNativeTarget "YouTubeMusic-iOS" */;
 			buildPhases = (
+				4C84906C27DF7B87E0B3BC08 /* [CP] Check Pods Manifest.lock */,
 				92D9E5D526EFCBFC0080EB98 /* Sources */,
 				92D9E5D626EFCBFC0080EB98 /* Frameworks */,
 				92D9E5D726EFCBFC0080EB98 /* Resources */,
+				C4EB31059DF820DDEB0E09CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C84906C27DF7B87E0B3BC08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouTubeMusic-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EB31059DF820DDEB0E09CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92D9E5D526EFCBFC0080EB98 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		92D9E5EE26EFCBFD0080EB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 103DC6A39082206E1668E94D /* Pods-YouTubeMusic-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		92D9E5EF26EFCBFD0080EB98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
