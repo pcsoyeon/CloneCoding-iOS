@@ -10,10 +10,14 @@
 		7242950790D82BFDCBFF91E1 /* Pods_YouTubeMusic_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */; };
 		92D9E5DD26EFCBFC0080EB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */; };
 		92D9E5DF26EFCBFC0080EB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */; };
-		92D9E5E126EFCBFC0080EB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5E026EFCBFC0080EB98 /* ViewController.swift */; };
+		92D9E5E126EFCBFC0080EB98 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5E026EFCBFC0080EB98 /* HomeVC.swift */; };
 		92D9E5E626EFCBFD0080EB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */; };
 		92D9E5E926EFCBFD0080EB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D9E5E726EFCBFD0080EB98 /* LaunchScreen.storyboard */; };
 		92DCF2DA26F2476B00A30F4D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2D926F2476B00A30F4D /* UIView+.swift */; };
+		92DCF2E126F24D5A00A30F4D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E026F24D5A00A30F4D /* TabBarController.swift */; };
+		92DCF2E326F24E1400A30F4D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E226F24E1400A30F4D /* SearchVC.swift */; };
+		92DCF2E526F24E2200A30F4D /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E426F24E2200A30F4D /* StorageVC.swift */; };
+		92DCF2E726F2567B00A30F4D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E626F2567B00A30F4D /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +25,15 @@
 		92D9E5D926EFCBFC0080EB98 /* YouTubeMusic-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTubeMusic-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92D9E5E026EFCBFC0080EB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92D9E5E026EFCBFC0080EB98 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D9E5E826EFCBFD0080EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D9E5EA26EFCBFD0080EB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92DCF2D926F2476B00A30F4D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		92DCF2E026F24D5A00A30F4D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		92DCF2E226F24E1400A30F4D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		92DCF2E426F24E2200A30F4D /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
+		92DCF2E626F2567B00A30F4D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeMusic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.release.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +91,7 @@
 		92DCF2D526F246C500A30F4D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92DCF2E826F256C400A30F4D /* Views */,
 				92DCF2DE26F2487A00A30F4D /* Cells */,
 				92DCF2DB26F2481700A30F4D /* VCs */,
 				92DCF2DC26F2481E00A30F4D /* Models */,
@@ -93,6 +102,7 @@
 		92DCF2D626F246F100A30F4D /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				92DCF2DF26F24D1800A30F4D /* Base */,
 				92DCF2D826F2473100A30F4D /* Extensions */,
 				92DCF2D726F2470B00A30F4D /* Support */,
 			);
@@ -119,7 +129,9 @@
 		92DCF2DB26F2481700A30F4D /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				92D9E5E026EFCBFC0080EB98 /* ViewController.swift */,
+				92D9E5E026EFCBFC0080EB98 /* HomeVC.swift */,
+				92DCF2E226F24E1400A30F4D /* SearchVC.swift */,
+				92DCF2E426F24E2200A30F4D /* StorageVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -136,6 +148,22 @@
 			children = (
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		92DCF2DF26F24D1800A30F4D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2E026F24D5A00A30F4D /* TabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		92DCF2E826F256C400A30F4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2E626F2567B00A30F4D /* HeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		942E43008C54A3477F18D9A5 /* Pods */ = {
@@ -268,10 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DCF2E326F24E1400A30F4D /* SearchVC.swift in Sources */,
 				92DCF2DA26F2476B00A30F4D /* UIView+.swift in Sources */,
-				92D9E5E126EFCBFC0080EB98 /* ViewController.swift in Sources */,
+				92D9E5E126EFCBFC0080EB98 /* HomeVC.swift in Sources */,
+				92DCF2E526F24E2200A30F4D /* StorageVC.swift in Sources */,
 				92D9E5DD26EFCBFC0080EB98 /* AppDelegate.swift in Sources */,
+				92DCF2E126F24D5A00A30F4D /* TabBarController.swift in Sources */,
 				92D9E5DF26EFCBFC0080EB98 /* SceneDelegate.swift in Sources */,
+				92DCF2E726F2567B00A30F4D /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
