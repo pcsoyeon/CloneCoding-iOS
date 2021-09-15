@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,9 @@
 		92D9E5DD26EFCBFC0080EB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */; };
 		92D9E5DF26EFCBFC0080EB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */; };
 		92D9E5E126EFCBFC0080EB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9E5E026EFCBFC0080EB98 /* ViewController.swift */; };
-		92D9E5E426EFCBFC0080EB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D9E5E226EFCBFC0080EB98 /* Main.storyboard */; };
 		92D9E5E626EFCBFD0080EB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */; };
 		92D9E5E926EFCBFD0080EB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D9E5E726EFCBFD0080EB98 /* LaunchScreen.storyboard */; };
+		92DCF2DA26F2476B00A30F4D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2D926F2476B00A30F4D /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92D9E5E026EFCBFC0080EB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92D9E5E326EFCBFC0080EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D9E5E826EFCBFD0080EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92D9E5EA26EFCBFD0080EB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DCF2D926F2476B00A30F4D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeMusic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.release.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +63,79 @@
 		92D9E5DB26EFCBFC0080EB98 /* YouTubeMusic-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */,
-				92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */,
-				92D9E5E026EFCBFC0080EB98 /* ViewController.swift */,
-				92D9E5E226EFCBFC0080EB98 /* Main.storyboard */,
-				92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */,
-				92D9E5E726EFCBFD0080EB98 /* LaunchScreen.storyboard */,
-				92D9E5EA26EFCBFD0080EB98 /* Info.plist */,
+				92DCF2D626F246F100A30F4D /* Global */,
+				92DCF2D426F246BB00A30F4D /* Resources */,
+				92DCF2D526F246C500A30F4D /* Sources */,
 			);
 			path = "YouTubeMusic-iOS";
+			sourceTree = "<group>";
+		};
+		92DCF2D426F246BB00A30F4D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92D9E5EA26EFCBFD0080EB98 /* Info.plist */,
+				92D9E5E526EFCBFD0080EB98 /* Assets.xcassets */,
+				92D9E5E726EFCBFD0080EB98 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92DCF2D526F246C500A30F4D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2DE26F2487A00A30F4D /* Cells */,
+				92DCF2DB26F2481700A30F4D /* VCs */,
+				92DCF2DC26F2481E00A30F4D /* Models */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92DCF2D626F246F100A30F4D /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2D826F2473100A30F4D /* Extensions */,
+				92DCF2D726F2470B00A30F4D /* Support */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		92DCF2D726F2470B00A30F4D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				92D9E5DC26EFCBFC0080EB98 /* AppDelegate.swift */,
+				92D9E5DE26EFCBFC0080EB98 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		92DCF2D826F2473100A30F4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92DCF2D926F2476B00A30F4D /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92DCF2DB26F2481700A30F4D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				92D9E5E026EFCBFC0080EB98 /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		92DCF2DC26F2481E00A30F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92DCF2DE26F2487A00A30F4D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		942E43008C54A3477F18D9A5 /* Pods */ = {
@@ -80,7 +144,6 @@
 				103DC6A39082206E1668E94D /* Pods-YouTubeMusic-iOS.debug.xcconfig */,
 				9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,7 +216,6 @@
 			files = (
 				92D9E5E926EFCBFD0080EB98 /* LaunchScreen.storyboard in Resources */,
 				92D9E5E626EFCBFD0080EB98 /* Assets.xcassets in Resources */,
-				92D9E5E426EFCBFC0080EB98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DCF2DA26F2476B00A30F4D /* UIView+.swift in Sources */,
 				92D9E5E126EFCBFC0080EB98 /* ViewController.swift in Sources */,
 				92D9E5DD26EFCBFC0080EB98 /* AppDelegate.swift in Sources */,
 				92D9E5DF26EFCBFC0080EB98 /* SceneDelegate.swift in Sources */,
@@ -215,14 +278,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92D9E5E226EFCBFC0080EB98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92D9E5E326EFCBFC0080EB98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92D9E5E726EFCBFD0080EB98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PU64TS56AD;
-				INFOPLIST_FILE = "YouTubeMusic-iOS/Info.plist";
+				INFOPLIST_FILE = "YouTubeMusic-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PU64TS56AD;
-				INFOPLIST_FILE = "YouTubeMusic-iOS/Info.plist";
+				INFOPLIST_FILE = "YouTubeMusic-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
