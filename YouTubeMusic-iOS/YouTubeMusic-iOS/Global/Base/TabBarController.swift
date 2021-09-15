@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().barTintColor = .darkGray
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         
-        let homeTab = HomeVC()
+        let homeTab = UINavigationController(rootViewController: HomeVC())
         homeTab.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house.fill"), selectedImage: UIImage(systemName: "house.fill"))
         
         let searchTab = SearchVC()

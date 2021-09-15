@@ -18,6 +18,9 @@
 		92DCF2E326F24E1400A30F4D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E226F24E1400A30F4D /* SearchVC.swift */; };
 		92DCF2E526F24E2200A30F4D /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E426F24E2200A30F4D /* StorageVC.swift */; };
 		92DCF2E726F2567B00A30F4D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E626F2567B00A30F4D /* HeaderView.swift */; };
+		92DCF2EA26F259F800A30F4D /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E926F259F800A30F4D /* TableHeaderView.swift */; };
+		92DCF2EC26F25F2000A30F4D /* ByTimeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2EB26F25F2000A30F4D /* ByTimeTVC.swift */; };
+		92DCF2EE26F2656500A30F4D /* ByTimeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2ED26F2656500A30F4D /* ByTimeCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		92DCF2E226F24E1400A30F4D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		92DCF2E426F24E2200A30F4D /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
 		92DCF2E626F2567B00A30F4D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		92DCF2E926F259F800A30F4D /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		92DCF2EB26F25F2000A30F4D /* ByTimeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByTimeTVC.swift; sourceTree = "<group>"; };
+		92DCF2ED26F2656500A30F4D /* ByTimeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByTimeCVC.swift; sourceTree = "<group>"; };
 		9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeMusic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.release.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,8 @@
 		92DCF2DE26F2487A00A30F4D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				92DCF2EB26F25F2000A30F4D /* ByTimeTVC.swift */,
+				92DCF2ED26F2656500A30F4D /* ByTimeCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				92DCF2E626F2567B00A30F4D /* HeaderView.swift */,
+				92DCF2E926F259F800A30F4D /* TableHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DCF2EA26F259F800A30F4D /* TableHeaderView.swift in Sources */,
+				92DCF2EE26F2656500A30F4D /* ByTimeCVC.swift in Sources */,
+				92DCF2EC26F25F2000A30F4D /* ByTimeTVC.swift in Sources */,
 				92DCF2E326F24E1400A30F4D /* SearchVC.swift in Sources */,
 				92DCF2DA26F2476B00A30F4D /* UIView+.swift in Sources */,
 				92D9E5E126EFCBFC0080EB98 /* HomeVC.swift in Sources */,
