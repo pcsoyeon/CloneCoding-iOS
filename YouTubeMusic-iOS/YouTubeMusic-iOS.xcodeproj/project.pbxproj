@@ -21,6 +21,7 @@
 		92DCF2EA26F259F800A30F4D /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2E926F259F800A30F4D /* TableHeaderView.swift */; };
 		92DCF2EC26F25F2000A30F4D /* ByTimeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2EB26F25F2000A30F4D /* ByTimeTVC.swift */; };
 		92DCF2EE26F2656500A30F4D /* ByTimeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCF2ED26F2656500A30F4D /* ByTimeCVC.swift */; };
+		92FE2BD226F60828001B0650 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 92FE2BD126F60828001B0650 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		92DCF2E926F259F800A30F4D /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		92DCF2EB26F25F2000A30F4D /* ByTimeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByTimeTVC.swift; sourceTree = "<group>"; };
 		92DCF2ED26F2656500A30F4D /* ByTimeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByTimeCVC.swift; sourceTree = "<group>"; };
+		92FE2BD126F60828001B0650 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9DA66FEFF76393948C503BD2 /* Pods_YouTubeMusic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeMusic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1ED36D7FCC34EC29780D5E /* Pods-YouTubeMusic-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeMusic-iOS.release.xcconfig"; path = "Target Support Files/Pods-YouTubeMusic-iOS/Pods-YouTubeMusic-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 		92D9E5D026EFCBFC0080EB98 = {
 			isa = PBXGroup;
 			children = (
+				92FE2BD126F60828001B0650 /* .swiftlint.yml */,
 				92D9E5DB26EFCBFC0080EB98 /* YouTubeMusic-iOS */,
 				92D9E5DA26EFCBFC0080EB98 /* Products */,
 				942E43008C54A3477F18D9A5 /* Pods */,
@@ -204,6 +207,7 @@
 				92D9E5D626EFCBFC0080EB98 /* Frameworks */,
 				92D9E5D726EFCBFC0080EB98 /* Resources */,
 				C4EB31059DF820DDEB0E09CB /* [CP] Embed Pods Frameworks */,
+				92FE2BD026F6078F001B0650 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FE2BD226F60828001B0650 /* .swiftlint.yml in Resources */,
 				92D9E5E926EFCBFD0080EB98 /* LaunchScreen.storyboard in Resources */,
 				92D9E5E626EFCBFD0080EB98 /* Assets.xcassets in Resources */,
 			);
@@ -280,6 +285,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		92FE2BD026F6078F001B0650 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		C4EB31059DF820DDEB0E09CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
