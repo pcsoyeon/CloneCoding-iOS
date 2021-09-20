@@ -12,6 +12,33 @@ class HomeVC: UIViewController {
     // MARK: - Properties
     
     private lazy var homeTableView = UITableView(frame: .zero, style: .grouped)
+    
+    // Set Custom Navigationbar
+    private lazy var logoButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Music", style: .plain, target: self, action: #selector(touchUpCompletionButton(_:)))
+        button.tintColor = .white
+        return button
+    }()
+    
+    private lazy var displayButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(touchUpCompletionButton(_:)))
+        button.tintColor = .white
+        button.setBackgroundImage(UIImage(systemName: "display"), for: .normal, barMetrics: UIBarMetrics.default)
+        return button
+    }()
+
+    private lazy var searchButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(touchUpCompletionButton(_:)))
+        button.tintColor = .white
+        button.setBackgroundImage(UIImage(systemName: "magnifyingglass"), for: .normal, barMetrics: UIBarMetrics.default)
+        return button
+    }()
+    
+    private lazy var userButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "User", style: .plain, target: self, action: #selector(touchUpCompletionButton(_:)))
+        button.tintColor = .white
+        return button
+    }()
 
     // MARK: - LifeCycle
     
@@ -20,6 +47,8 @@ class HomeVC: UIViewController {
         
         configUI()
         setConstraints()
+        setNavigationBar()
+        
         setTableView()
     }
 }
@@ -27,8 +56,16 @@ class HomeVC: UIViewController {
 extension HomeVC {
     func configUI() {
         view.backgroundColor = .black
+    }
+    
+    func setNavigationBar() {
+        // 네비게이션 바 구분선 투명하게
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.shadowImage = UIImage()
         
-        title = "Music"
+        navigationItem.setLeftBarButton(logoButton, animated: true)
+        navigationItem.setRightBarButtonItems([userButton, searchButton, displayButton], animated: true)
     }
     
     func setConstraints() {
@@ -46,6 +83,14 @@ extension HomeVC {
         homeTableView.dataSource = self
         
         homeTableView.tableFooterView?.isHidden = true
+    }
+}
+
+// MARK: - Action Methods
+
+extension HomeVC {
+    @objc func touchUpCompletionButton(_ sender: UIBarButtonItem) {
+        print("Button Clicked!!")
     }
 }
 
@@ -97,6 +142,10 @@ extension HomeVC: UITableViewDelegate {
         }
         
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 }
 
